@@ -13,7 +13,7 @@
     - first, unused object are marked
         - objects without live references are counted as unused
             - simple approach is to follow all references, starting from a root object, and mark all reached objects as live
-    - then, marked objects are deleted
+    - then, unmarked objects are deleted
         - really, the memory allocator stores a reference to the free spaces
     - this can fragment memory, so free space is dispersed between live objects
         - hence, the memory can be compacted, where live objects are shifted in memory to create a contiguous free region
